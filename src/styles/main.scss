@@ -1,17 +1,18 @@
 .banner {
     width: 60%;
-    margin:  0 auto;
+    margin: 0 auto;
     @include tablet{
         width: 100%;
     }
     @include mobile{
-            width: 100%;
+        width: 100%;
     }
     height: calc(90vh - 100px);
-    @include flex-layout(column, center, center);
+    @include flex-layout(column);
     h1 {
         margin: 1rem 0;
         font-size: 4rem;
+        text-align: center;
     }
     p {
         margin: 1rem 0;
@@ -26,5 +27,3 @@ section{
     }
     margin: 0 auto;
 }
-
-   

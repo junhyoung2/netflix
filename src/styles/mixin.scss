@@ -6,12 +6,12 @@
 }
 @mixin btn-style($bg: $main-color, $font: $font-small) {
     background-color: $bg;
-    border-radius: 3px;
+    border-radius: 5px;
     color: $text-color;
     font-size: $font;
     border: none;
     outline: none;
-    padding: 0.5rem 1.5rem;
+    padding: 0.5rem 1rem;
     cursor: pointer;
 }
 @mixin floation-label {
@@ -19,36 +19,36 @@
     cursor: text;
     input {
         width: 100%;
-        padding: 15px 10px 6px;
+        padding: 20px 10px 6px;
         background-color: transparent;
-        outline: none;
         border: 1px solid #777;
         border-radius: 5px;
         color: $text-color;
         font-size: $font-medium;
     }
     input:focus + span,
-    input:valid +span
-     {
-        top: -10px;
+    input:valid + span {
+        top: -8px;
         font-size: 10px;
     }
     span {
         position: absolute;
         left: 10px;
-        top: -5px;
+        top: 1px;
         color: #888;
         transition: 0.5s;
+        @include mobile{
+            font-size: 16px;
+        }
     }
 }
-
 @mixin tablet{
-    @media screen and (max-width :$medium-size) {
+    @media screen and (max-width:$medium-size) {
         @content;
     }
 }
 @mixin mobile{
-    @media screen and (max-width :$small-size) {
+    @media screen and (max-width:$small-size) {
         @content;
     }
 }
